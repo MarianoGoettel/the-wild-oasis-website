@@ -10,12 +10,16 @@ const Cabin = ({ cabin }: { cabin: Tables<"cabins"> }) => {
   return (
     <div className="grid grid-cols-[3fr_4fr] gap-20 border border-primary-800 py-3 px-10 mb-24">
       <div className="relative scale-[1.15] -translate-x-3">
-        <Image
-          src={image}
-          alt={`Cabin ${name}`}
-          fill
-          className="object-cover"
-        />
+        {typeof image === "string" ? (
+          <Image
+            src={image}
+            alt={`Cabin ${name}`}
+            fill
+            className="object-cover"
+          />
+        ) : (
+          ""
+        )}
       </div>
 
       <div>

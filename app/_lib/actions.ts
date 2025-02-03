@@ -51,7 +51,6 @@ const createBooking = async (
     hasBreakfast: false,
     status: "unconfirmed",
   };
-
   const { error } = await supabase
     .from("bookings")
     .insert([newBooking])

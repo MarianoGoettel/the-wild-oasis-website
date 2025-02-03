@@ -63,12 +63,16 @@ const ReservationCard = async ({ booking, onDelete }: BookingPropType) => {
   return (
     <div className="flex border border-primary-800">
       <div className="relative h-32 aspect-square">
-        <Image
-          src={image}
-          alt={`Cabin ${name}`}
-          fill
-          className="object-cover border-r border-primary-800"
-        />
+        {typeof image === "string" ? (
+          <Image
+            src={image}
+            alt={`Cabin ${name}`}
+            fill
+            className="object-cover border-r border-primary-800"
+          />
+        ) : (
+          ""
+        )}
       </div>
 
       <div className="flex-grow px-6 py-3 flex flex-col">

@@ -1,8 +1,7 @@
-import { getBookedDatesByCabinId, getCabin } from "@/app/_lib/data-service";
-import { NextRequest } from "next/server";
+/*import { getBookedDatesByCabinId, getCabin } from "@/app/_lib/data-service";
 
 const GET = async (
-  request: NextRequest,
+  request: object,
   { params }: { params: { cabinId: string } }
 ) => {
   const { cabinId } = params;
@@ -19,3 +18,4 @@ const GET = async (
 };
 
 export { GET };
+*/

@@ -14,12 +14,16 @@ function CabinCard({ cabin }: CabinCardPropsType) {
   return (
     <div className="flex border-primary-800 border">
       <div className="flex-1 relative">
-        <Image
-          fill
-          src={image}
-          alt={`Cabin ${name}`}
-          className="object-cover border-r border-primary-800"
-        />
+        {typeof image === "string" ? (
+          <Image
+            fill
+            src={image}
+            alt={`Cabin ${name}`}
+            className="object-cover border-r border-primary-800"
+          />
+        ) : (
+          ""
+        )}
       </div>
 
       <div className="flex-grow">
